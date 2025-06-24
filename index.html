@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline of Us</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #ffe6e6, #ffe0f0, #fff4e6);
+    color: #2e2e2e;
+    overflow-x: hidden;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(90deg, #ffb6c1, #ffc0cb, #ffe0f0);
+    border-bottom: 1px solid #ffa6c9;
+    animation: fadeInDown 1.2s ease-out;
+  }
+
+  header h1 {
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #d6336c;
+    text-shadow: 1px 1px 2px #fff;
+  }
+
+  header p {
+    color: #5a5a5a;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem 0;
+  }
+
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #ff69b4;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    animation: growLine 3s ease-in-out forwards;
+  }
+
+  .container {
+    padding: 1rem 2rem;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards;
+    animation-delay: 0.3s;
+  }
+
+  .left { left: 0; }
+  .right { left: 50%; }
+
+  .content {
+    background-color: #fff0f6;
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 10px #ffb6c144;
+    animation: pulseBox 2s infinite ease-in-out;
+  }
+
+  .container::before {
+    content: "💖";
+    position: absolute;
+    font-size: 1.5rem;
+    top: 15px;
+    right: -20px;
+    z-index: 1;
+  }
+
+  .right::before {
+    left: -20px;
+    right: auto;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulseBox {
+    0%, 100% { box-shadow: 0 0 10px #ffb6c144; }
+    50% { box-shadow: 0 0 20px #ff69b444; }
+  }
+
+  @keyframes growLine {
+    from { height: 0; }
+    to { height: 100%; }
+  }
+
+  .date {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .highlight {
+    color: #e60073;
+    font-weight: bold;
+  }
+
+  .event-photo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .event-photo:hover {
+    transform: scale(1.05);
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 100%;
+      left: 0;
+      padding-left: 4rem;
+      padding-right: 2rem;
+    }
+    .timeline::after {
+      left: 30px;
+    }
+    .container::before {
+      left: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Timeline of Us</h1>
+    <p>How it all began...</p>
+  </header>
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <p class="date">15 November 2019</p>
+        <p><span class="highlight">Facebook Friend Request Accepted</span><br> A simple click. A new connection. Something special had begun.</p>
+        <img src="images/facebook1.jpg" alt="Friend Request" class="event-photo">
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <p class="date">1 December 2019</p>
+        <p><span class="highlight">We Started Chatting</span><br> From "Hi" to late night texts, the silence between us turned into stories and laughs.</p>
+        <img src="images/facebook2.jpg" alt="Chat Started" class="event-photo">
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <p class="date">15 December 2019</p>
+        <p><span class="highlight">I Told Her I Like You</span><br> With a heart full of hope, I confessed. She stayed silent. My heart heard it all.</p>
+        <img src="images/facebook4.jpg" alt="Confession" class="event-photo">
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <p class="date">23 December 2019</p>
+        <p><span class="highlight">Zid to Meet</span><br> I asked again, stubborn but sincere. She paused again — 2 days of waiting, of hoping.</p>
+        <img src="images/facebook5.jpg" alt="Zid to Meet" class="event-photo">
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <p class="date">3 January 2020</p>
+        <p><span class="highlight">We Met at Chhatarpur Mandir</span><br> It was finally real. Eyes met, smiles exchanged. A story that found its first page together.</p>
+        <img src="images/facebook3.jpg" alt="First Meet" class="event-photo">
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <p class="date">Today...</p>
+        <p><span class="highlight">The Story is Still Going</span><br>
+          ❤️ This journey is filled with love, memories, and moments we cherish.<br>
+          It's been <span id="daysCount"></span> days of us, side by side.<br>
+          From a friend request to now, every day we write a new line in our story.
+          <br><strong>Let’s keep making it beautiful.</strong>
+        </p>
+        <img src="images/facebook6.jpg" alt="Together Now" class="event-photo">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function countDays(startDateStr) {
+      const startDate = new Date(startDateStr);
+      const today = new Date();
+      const timeDiff = today - startDate;
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      document.getElementById("daysCount").textContent = days;
+    }
+    countDays("2020-01-03");
+  </script>
+</body>
+</html>
